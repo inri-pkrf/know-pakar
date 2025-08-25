@@ -1,0 +1,23 @@
+.Header {
+    position: fixed;
+    width: 100%;
+    height: 12vh;
+    top: 0%;
+    background-color:aliceblue;
+    z-index: 1000;
+}
+
+
+#logo-mihlala {
+    position: absolute;
+    width: 12%;
+    height: auto;
+    right: 1%;
+
+}
+
+#orange-dicor {
+    position: absolute;
+    width: 15%;
+    left: 0%;
+}
