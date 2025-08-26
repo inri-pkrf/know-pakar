@@ -87,7 +87,7 @@ function Intro() {
           <div className="speech-bubble">
             <h1 className="header-home-page">ברוכים הבאים ללומדת מבוא לפקע"ר</h1>
             <h1 className="header-home-page">בואו להכיר את היחידה!</h1>
-            <div id="start-button" onClick={goToNextPage}> נתחיל? </div>
+            <div id="start-button" onClick={goToNextPage}> שנתחיל? </div>
           </div>
         </div>
         </>
