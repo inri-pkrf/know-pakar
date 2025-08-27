@@ -13,37 +13,55 @@
   align-items: flex-start;
   flex-wrap: wrap;
   gap: 2vw;
-  margin-top: 15vh;
+  margin-top: 20vh;
 }
 
 .info-tab {
   width: 20vw;  
   height: 40vh;  
-  border-radius: 2vw;
-  box-shadow: 0.5vw 0.5vw 0.3vw rgba(0, 0, 0, 0.25);
   padding: 2vh 1vw;
   text-align: center;
-  perspective: 1000px;
+  perspective: 1000px; 
   cursor: pointer;
-  background: #A6BDC9;
   position: relative;
-  transform-style: preserve-3d;
-  transition: transform 0.8s cubic-bezier(0.4, 0.2, 0.2, 1);
   box-sizing: border-box;
-  overflow: hidden;
+  overflow: visible; 
+  z-index: 1000;       
 }
 
 .flip-card-inner {
-  width: 100%;
-  height: 100%;
-  position: relative;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.8s cubic-bezier(0.4, 0.2, 0.2, 1);
+    background: #A6BDC9;
+    box-shadow: 0.5vw 0.5vw 0.3vw rgba(0, 0, 0, 0.25);
+    border-radius: 2vw;
+    z-index: 1100; 
 }
 
-.info-tab:hover {
+
+.info-tab:hover .flip-card-inner {
   transform: rotateY(180deg);
 }
 
 /* צד קדמי וצד אחורי */
+.card-front {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 2vw;
+  backface-visibility: hidden;   
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2vh 1vw;
+  text-align: center;
+  box-sizing: border-box;
+}
+
 .card-front, .card-back {
   position: absolute;
   width: 100%;
@@ -72,20 +90,24 @@
 
 /* תמונה */
 .card-front .man-pic {
-  margin-top: 10%;       /* מוריד קצת מרווח עליון כדי שהתמונה תיראה גדולה יותר */
+  margin-top: 6%;     
   width: 100%;
   height: auto;
   max-width: 100%;
-  max-height: 70%;       /* הגדלנו מ-60% ל-70% */
+  max-height: 75%;      
   object-fit: contain;
 }
 
 
 /* צד אחורי */
+
 .card-back {
-  background-color: rgba(248, 248, 248, 0.95);
+  background-color: #A6BDC9;
   transform: rotateY(180deg);
   box-shadow: 0.5vw 0.5vw 0.3vw rgba(0, 0, 0, 0.25);
+  font-size: 1.5vmax;
+  font-family: 'assistant';
+  padding-top: 20%;
 }
 
 .next-btn {
@@ -93,4 +115,26 @@
   bottom: 20%;
   left: 5%;
   z-index: 2000;
+}
+
+#definition {
+    font-family: 'karantina';
+    position: absolute;
+    background-color: #85969E;
+    width: 100%;
+    height: 20%;
+    top: 0%;
+    border-radius: 2vw 2vh 0vh 0vh;
+    font-size: 3vmax;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+#title {
+ position: absolute;
+ left: 50%;
+ top: 10%;
+ transform:translate(-50%, -50%) ;
+ font-size: 3vmax
 }
