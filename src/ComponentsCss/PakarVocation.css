@@ -111,10 +111,15 @@
 }
 
 .next-btn {
-  position: absolute;
-  bottom: 20%;
-  left: 5%;
+  position: fixed;
+  bottom: 10%;     /* אותו מרחק מהתחתית */
+  left: 15%;        /* מרחק אחיד מהקצה השמאלי */
   z-index: 2000;
+  cursor: pointer;
+}
+
+.next-btn:hover {
+    filter: brightness(90%);
 }
 
 #definition {

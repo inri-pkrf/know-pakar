@@ -1,14 +1,17 @@
 #nav-bar {
-  position: absolute;
-  bottom: 95%;
-  left: 50%;         
+  position: fixed;  /* תמיד על המסך */
+  bottom: 85%;       /* מרחק קבוע מהתחתית */
+  left: 50%;
   transform: translateX(-50%);
   width: 70vw;
   height: 10vh;
   background: #AEDAF5;
-  box-shadow: 7px 7px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 7px 7px 4px rgba(0,0,0,0.25);
   border-radius: 20px;
-  z-index: 90000000;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 9000000;
   display: flex;
   justify-content: space-around;
   align-items: center;

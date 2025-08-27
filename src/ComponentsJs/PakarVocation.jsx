@@ -1,6 +1,7 @@
 import React from 'react';
 import '../ComponentsCss/PakarVocation.css';
 import NavBar from '../ComponentsJs/NavBar';
+import { useNavigate } from 'react-router-dom';
 
 function PakarVocation() {
   const tabs = [
@@ -14,6 +15,11 @@ function PakarVocation() {
     { id: 1, text: "פיקוד מרחבי" },
     { id: 2, text: "סמכות מקצועית ראשית בנושאי ההתגוננות האזרחית, החילוץ וההצלה" }
   ]
+    const navigate = useNavigate();
+
+    const goToNextPage = () => {
+    navigate('/PakarRole');
+  };
 
   return (
     <div className="PakarVocation">
@@ -24,6 +30,7 @@ function PakarVocation() {
         alt="next-btn" 
         id="next-btn" 
         className='next-btn'
+        onClick={goToNextPage}
       />
 
       <div id='tabs'>
