@@ -1,23 +1,23 @@
-.next-btn {
+.next-btn,
+.back-btn {
   position: fixed;
-  bottom: 10%;     /* אותו מרחק מהתחתית */
-  left: 15%;        /* מרחק אחיד מהקצה השמאלי */
+  bottom: 5vh;       /* 5% מגובה המסך */
+  width: 10vw;        /* רוחב הכפתור 5% מרוחב המסך */
+  height: auto;      /* שמור על יחס תמונה */
   z-index: 2000;
   cursor: pointer;
+  transition: filter 0.2s ease;
 }
 
-.next-btn:hover {
-    filter: brightness(90%);
+.next-btn {
+  left: 15vw;         /* 5% מרוחב המסך מהקצה השמאלי */
 }
 
 .back-btn {
-  position: fixed;
-  bottom: 10%;     /* מרחק אחיד מהתחתית */
-  right: 15%;       /* מרחק אחיד מהקצה הימני */
-  z-index: 2000;
-  cursor: pointer;
+  right: 15vw;        /* 5% מרוחב המסך מהקצה הימני */
 }
 
+.next-btn:hover,
 .back-btn:hover {
-    filter: brightness(90%);
+  filter: brightness(90%);
 }

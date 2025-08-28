@@ -1,0 +1,28 @@
+.PictureDiv {
+    width: 20vw;         /* 80% מרוחב המסך */
+    height: 20vh;        /* 30% מגובה המסך */
+    margin: 2vh auto;    /* רווח אנכי יחסי לגובה המסך, מרכז אופקי */
+    position: relative;
+    border-radius: 1vw;  /* רדיוס משתנה לפי רוחב המסך */
+    overflow: hidden;
+    box-shadow: 0 0 1vw rgba(0,0,0,0.2); /* הצללה יחסית לגודל המסך */
+    background-color: #ffffff;
+}
+
+.PictureDiv img.picture-img {
+    width: 80%;         /* תמונה תתאים לרוחב הדיב */
+    height: auto;         /* 70% מגובה הדיב */
+    object-fit: cover;   /* שומר על יחס התמונה */
+    display: block;
+    margin: 2vh auto;
+}
+
+.PictureDiv .picture-text {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;        /* ריווח עליון ותחתון לפי vh */
+    font-weight: bold;
+    font-family: 'assistant';
+    font-size: 1.5vmax;      /* גודל טקסט רספונסיבי לפי vh */
+}

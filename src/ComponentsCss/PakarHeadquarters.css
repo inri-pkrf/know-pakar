@@ -9,3 +9,13 @@
     position: relative;
     top: 15%;
 }
+
+#pictures {
+    position: absolute;
+    display: flex;
+    width: 70%;
+    flex-wrap: wrap;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
