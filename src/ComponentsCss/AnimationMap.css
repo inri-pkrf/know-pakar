@@ -1,0 +1,56 @@
+.AnimationMap {
+    background-color: aliceblue;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.maps-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.maps {
+    position: absolute;
+    width: 25vw;
+    opacity: 0;
+    transform: translateX(100vw); /* מתחילה מחוץ למסך מימין */
+    transition: all 0.5s ease-out;
+}
+
+.animate-map {
+    opacity: 1;
+    transform: translateX(0); /* מגיעה למיקום הסופי */
+}
+
+.map-text {
+    position: absolute;
+    font-size: 3vmax;
+    font-weight: bold;
+    opacity: 0;
+    transform: translateX(100vw); /* מתחיל מחוץ למסך מימין */
+    transition: all 0.5s ease-out;
+}
+
+.animate-text {
+    opacity: 1;
+    transform: translateX(0); /* מגיע למיקום הסופי מעל המפה */
+}
+
+.map-text.agana-map {
+    color: #3E444E; /* כחול */
+}
+
+.map-text.atraa-map {
+    color: #5D687C; /* אדום-כתום */
+}
+
+.map-text.itgonenut-map {
+    color: #8696B0; /* ירוק */
+}
+
+.map-text.maane-map {
+    color: #FA9B1D; /* צהוב */
+}

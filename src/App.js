@@ -7,6 +7,9 @@ import Header from './ComponentsJs/Header.jsx';
 import PakarVocation from './ComponentsJs/PakarVocation.jsx';
 import Footer from './ComponentsJs/Footer.jsx';
 import PakarRole from './ComponentsJs/PakarRole.jsx';
+import CommandControl from './ComponentsJs/CommandControl.jsx'
+import AnimationMap from './ComponentsJs/AnimationMap.jsx'
+import PakarHeadquarters from './ComponentsJs/PakarHeadquarters.jsx'
 
 function App() {
     return (
@@ -17,6 +20,9 @@ function App() {
                 <Route path="/" element={<Intro />} />
                 <Route path="/PakarVocation" element={<PakarVocation />} />
                 <Route path="/PakarRole" element={<PakarRole />} />
+                <Route path="/CommandControl" element={<CommandControl />} />
+                <Route path="/AnimationMap" element={<AnimationMap />} />
+                <Route path="/PakarHeadquarters" element={<PakarHeadquarters />} />
             </Routes> 
         </div>
     );

@@ -1,0 +1,11 @@
+.PakarHeadquarters {
+    background-color: aliceblue;
+    width: 100vw;
+    height: 100vh;
+}
+
+#title-PakarHeadquarters {
+    font-size: 4vmax;
+    position: relative;
+    top: 15%;
+}

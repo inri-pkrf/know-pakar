@@ -1,7 +1,7 @@
 import React from 'react';
 import '../ComponentsCss/PakarVocation.css';
 import NavBar from '../ComponentsJs/NavBar';
-import { useNavigate } from 'react-router-dom';
+import NavButton from '../ComponentsJs/NavButton';
 
 function PakarVocation() {
   const tabs = [
@@ -15,24 +15,12 @@ function PakarVocation() {
     { id: 1, text: "פיקוד מרחבי" },
     { id: 2, text: "סמכות מקצועית ראשית בנושאי ההתגוננות האזרחית, החילוץ וההצלה" }
   ]
-    const navigate = useNavigate();
-
-    const goToNextPage = () => {
-    navigate('/PakarRole');
-  };
 
   return (
     <div className="PakarVocation">
+      <NavButton type="next" to="/PakarRole" /> 
       <NavBar activeButton={0} className="navbar" />
       <h1 id='title'>העבר עכבר מעל הכרטיסייה למידע נוסף</h1>
-      <img 
-        src={`${process.env.PUBLIC_URL}/assets/next-btn.png`} 
-        alt="next-btn" 
-        id="next-btn" 
-        className='next-btn'
-        onClick={goToNextPage}
-      />
-
       <div id='tabs'>
         {tabs.map((tab, index) => (   
         <div key={tab.id} className="info-tab">

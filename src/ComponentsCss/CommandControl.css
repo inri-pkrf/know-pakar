@@ -1,0 +1,89 @@
+.CommandControl {
+    background-color: aliceblue;
+    width: 100vw;
+    height: 100vh;
+}
+
+#info-buttons {
+    display: flex;
+    justify-content: center;   /* מרכז את הכפתורים אופקית */
+    align-items: flex-start;   /* יישור אנכי */
+    width: 80%;
+    margin: 30vh auto 0 auto;  /* מרחק מהכותרת ומרכז אוטומטי */
+    gap: 8vw;                  /* רווח אחיד בין הכפתורים */
+}
+
+.info-btn-container {
+    display: flex;
+    flex-direction: column;    /* טקסט וחץ מתחת לכפתור */
+    align-items: center;
+    position: relative;        /* לא משנה את הכפתורים */
+}
+
+.info-btn-container img#arrow {
+    margin-top: 3vh;
+    visibility: hidden;        /* מוסתר כברירת מחדל */
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    transform: translateY(-5px);  /* התחלה מעט מעל */
+}
+
+/* כשהכפתור פתוח */
+.info-btn-container.open img#arrow {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);  /* נע למקום הטבעי */
+}
+
+.info-btn {
+    width: 15vw;
+    padding: 2vh 2vw;
+    background: #E4B982;
+    box-shadow: 0.3vw 0.3vw 0.3vw rgba(0, 0, 0, 0.25);
+    border-radius: 2vw;
+    font-family: 'assistant';
+    font-size: 1.5vmax;
+    cursor: pointer;
+    margin: 0;                 /* הסרת margin שמזיז את הטקסט */
+    position: relative;
+    top: auto;
+}
+
+.info-text {
+    margin-top: 2vh;
+    font-size: 1.5vmax;
+    text-align: center;        /* מרכז את הטקסט */
+    font-family: "assistant";
+    width: 100%;               /* קח את כל רוחב ה-container */
+    max-width: 15vw;           /* לא לחרוג מרוחב הכפתור */
+    min-height: 3vh;           /* שמור מקום */
+    visibility: hidden;        /* מוסתר כברירת מחדל */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* כשהטקסט צריך להופיע */
+.info-btn-container.open .info-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+#title-command-control {
+    position: relative;
+    top: 15vh;
+    font-size: 3.5vmax;
+}
+
+#arrows {
+    width: 50vw;
+    height: auto;
+    position: absolute;
+    top: 35vh;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#arrow {
+    width: 3vw;
+    height: auto;
+}

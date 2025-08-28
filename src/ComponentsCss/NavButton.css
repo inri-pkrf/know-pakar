@@ -1,0 +1,23 @@
+.next-btn {
+  position: fixed;
+  bottom: 10%;     /* אותו מרחק מהתחתית */
+  left: 15%;        /* מרחק אחיד מהקצה השמאלי */
+  z-index: 2000;
+  cursor: pointer;
+}
+
+.next-btn:hover {
+    filter: brightness(90%);
+}
+
+.back-btn {
+  position: fixed;
+  bottom: 10%;     /* מרחק אחיד מהתחתית */
+  right: 15%;       /* מרחק אחיד מהקצה הימני */
+  z-index: 2000;
+  cursor: pointer;
+}
+
+.back-btn:hover {
+    filter: brightness(90%);
+}
