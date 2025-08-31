@@ -11,6 +11,8 @@ import CommandControl from './ComponentsJs/CommandControl.jsx'
 import AnimationMap from './ComponentsJs/AnimationMap.jsx'
 import PakarHeadquarters from './ComponentsJs/PakarHeadquarters.jsx'
 import CommandStructure from './ComponentsJs/CommandStructure.jsx'
+import PakarDistricts from './ComponentsJs/PakarDistricts.jsx'
+import Medicine from './ComponentsJs/Medicine.jsx'
 
 function App() {
     return (
@@ -25,6 +27,8 @@ function App() {
                 <Route path="/AnimationMap" element={<AnimationMap />} />
                 <Route path="/PakarHeadquarters" element={<PakarHeadquarters />} />
                 <Route path="/CommandStructure" element={<CommandStructure />} />
+                <Route path="/PakarDistricts" element={<PakarDistricts />} />
+                <Route path="/Medicine" element={<Medicine />} />
             </Routes> 
         </div>
     );

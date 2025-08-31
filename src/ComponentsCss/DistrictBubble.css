@@ -1,0 +1,60 @@
+.rectangle {
+  position: relative;
+  width: 25vw;
+  max-width: 400px;
+  min-width: 150px;
+  background: #ffffff;
+  box-shadow: 0.2vw 0.2vw 0.4vw rgba(0, 0, 0, 0.25);
+  border-radius: 1vw;
+  padding: 1.5vmin;
+  box-sizing: border-box;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: row;      
+  align-items: center;      
+  justify-content: space-between;
+  text-align: left;
+  gap: 2vmin;
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  
+  align-items: flex-start;  
+  flex: 1;
+  margin-left: 2vmin;     
+}
+
+.map-logos {
+  width: 25%;
+  max-width: 100px;
+  height: auto;
+  display: block;
+  margin-right: 1vmin;      
+}
+
+#title-DistrictBubble {
+  font-size: 4vmin;
+  margin: 0.2em 0;
+  word-wrap: break-word;
+}
+
+.text-DistrictBubble {
+  font-family: 'assistant';
+  font-size: 2.5vmin;
+  margin: 0.1em 0;
+  word-wrap: break-word;
+}
+
+.polygon {
+  position: absolute;
+  top: 50%;
+  left: 97%; 
+  width: 2vw;
+  height: 3vh;
+  background: #ffffff;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  transform: rotate(104.42deg);
+}
