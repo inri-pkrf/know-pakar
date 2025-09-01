@@ -1,11 +1,11 @@
-import React from "react";
-import { useNavigate } from "react-router-dom";  // צריך React Router
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "../ComponentsCss/NavBar.css";
 
 function NavBar({ activeButton }) {
   const navigate = useNavigate();
+  const [isOpen, setIsOpen] = useState(false); // מצב פתיחה/סגירה לטלפון
 
-  // מערך הכפתורים + הנתיב לכל כפתור
   const buttons = [
     { label: "ייעוד פקע\"ר", path: "/PakarVocation" },
     { label: "התפיסה המבצעית", path: "/PakarRole" },
@@ -15,28 +15,38 @@ function NavBar({ activeButton }) {
   ];
 
   return (
-    <div id="nav-bar">
-      {buttons.map((btn, index) => (
-        <div
-          key={index}
-          className="nav-bar-button"
-          onClick={() => navigate(btn.path)}  // ניווט בעת לחיצה
-        >
-          {activeButton === index && (
-            <>
-              <img
-                src={`${process.env.PUBLIC_URL}/assets/small-soldier.png`}
-                alt="חייל קטן"
-                className="small-soldier-image"
-              />
-              <div id="speech-bubble">אנחנו כאן</div>
-              <div id="triangular"></div>
-            </>
-          )}
-          <p>{btn.label}</p>
-        </div>
-      ))}
-    </div>
+    <>
+      {/* כפתור פתיחה רק למסכים קטנים */}
+      <button className="nav-toggle" onClick={() => setIsOpen(!isOpen)}>
+        ☰
+      </button>
+
+      <div id="nav-bar" className={isOpen ? "open" : ""}>
+        {buttons.map((btn, index) => (
+          <div
+            key={index}
+            className="nav-bar-button"
+            onClick={() => {
+              navigate(btn.path);
+              setIsOpen(false); // סוגר את ה-navbar אחרי לחיצה
+            }}
+          >
+            {activeButton === index && (
+              <>
+                <img
+                  src={`${process.env.PUBLIC_URL}/assets/small-soldier.png`}
+                  alt="חייל קטן"
+                  className="small-soldier-image"
+                />
+                <div id="speech-bubble">אנחנו כאן</div>
+                <div id="triangular"></div>
+              </>
+            )}
+            <p>{btn.label}</p>
+          </div>
+        ))}
+      </div>
+    </>
   );
 }
 

@@ -89,3 +89,100 @@
   border-bottom: 0.3em solid transparent;
   border-right: 0.8em solid #FFFFFF;
 }
+
+/* כפתור פתיחה למסכים קטנים בלבד */
+.nav-toggle {
+
+  display: none; /* מוסתר במסכים גדולים */
+  position: fixed;
+  top: 2%;
+  left: 5%;
+  z-index: 10000000;
+  font-size: 2rem;
+  background: #61A4CF;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 0.2em 0.4em;
+}
+
+@media screen and (max-width: 768px) {
+    .nav-toggle {
+    display: block;
+  }
+
+  #nav-bar {
+    display: none; /* מוסתר כברירת מחדל */
+    position: fixed;
+    top: 8%;
+    left: 30%;
+    transform: translateX(-50%);
+    width: 40vw;
+    height: 50vh;
+    background: #AEDAF5;
+    box-shadow: 7px 7px 4px rgba(0,0,0,0.25);
+    border-radius: 0px 20px 20px 20px;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2%;
+    align-items: center;
+    flex-wrap: nowrap;   
+    font-size: 7vmin;
+    z-index: 9000000;
+  }
+
+  #nav-bar.open {
+    display: flex; /* יוצג כאשר נלחץ הכפתור */
+  }
+
+.nav-bar-button {
+  position: relative; 
+  min-width: 80%;
+  background: #61A4CF;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin: 0.5vh;
+  text-align: center;
+ flex: 0 0 auto;
+  height: 6vh;
+}
+
+.nav-bar-button p {
+  font-size: 3vmax;
+}
+
+#speech-bubble {
+  position: absolute;
+  bottom: 120%;      
+  left: 36%;            
+  width: 50%;
+  max-width: 160px;
+  min-width: 80px;
+  padding: 0.3em 0.5em;
+  background: #FFFFFF;
+  box-shadow: 4px 4px 4px rgba(0,0,0,0.25);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 3vmax;
+}
+
+#triangular {
+  position: absolute;
+  left: 27%;
+  bottom: 125%;   
+  width: 0;
+  height: 0;
+  border-top: 0.3em solid transparent;
+  border-bottom: 0.3em solid transparent;
+  border-right: 0.8em solid #FFFFFF;
+}
+
+}

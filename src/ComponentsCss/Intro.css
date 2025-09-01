@@ -224,7 +224,7 @@
         z-index: 3000; /* גבוה יותר מהוידאו והקונטיינר */
     }
 
-    /* .soldier-image {
+    .soldier-image {
         position: absolute;
         margin-top: 80%;
         width: 60%;
@@ -279,7 +279,7 @@
       rotate: 220deg;
       z-index: 3;
 
-    }  */
+    } 
 }
 
 @media screen and (min-width: 769px) and (max-width: 1024px) {
@@ -309,10 +309,12 @@
         font-weight: bolder;
         border: none;
         cursor: pointer;
-        z-index: 3000; /* גבוה יותר מהוידאו והקונטיינר */
+        z-index: 4000; /* גבוה יותר מהוידאו והקונטיינר */
     }
 
     .skip:hover {
         font-size: 3.5em;
     }
+
+    
 }

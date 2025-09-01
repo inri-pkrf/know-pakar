@@ -21,3 +21,19 @@
     width: 15%;
     left: 0%;
 }
+
+@media screen and (max-width: 768px) {
+    #logo-mihlala {
+        position: absolute;
+        width: 30%;
+        height: auto;
+        right: 1%;
+
+    }
+
+    #orange-dicor {
+        position: absolute;
+        width: 25%;
+        left: 0%;
+    }
+}
