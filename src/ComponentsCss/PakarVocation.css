@@ -134,7 +134,9 @@
     gap: 2vw;
     margin-top: 120vh;
     left: 30%;
-    transform: translate(-50%, -50%)
+    transform: translate(-50%, -50%);
+    max-height: 70vh;
+    overflow-y: auto;
 }
 
 #definition {
