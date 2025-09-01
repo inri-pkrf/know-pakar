@@ -37,7 +37,7 @@ function AnimationMap() {
     }, animationDuration); // כל מפה מופיעה אחרי סיום האנימציה של הקודמת
 
     return () => clearInterval(interval);
-  });
+  }, []);
 
   return (
     <div className="AnimationMap">
