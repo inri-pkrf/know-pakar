@@ -21,3 +21,18 @@
 .back-btn:hover {
   filter: brightness(90%);
 }
+
+@media screen and (max-width: 768px) {
+  .next-btn,
+.back-btn {
+  width: 20vw;        
+}
+
+.next-btn {
+  left: 5vw;         /* 5% מרוחב המסך מהקצה השמאלי */
+}
+
+.back-btn {
+  right: 5vw;        /* 5% מרוחב המסך מהקצה הימני */
+}
+}

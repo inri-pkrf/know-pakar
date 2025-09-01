@@ -20,7 +20,8 @@ function PakarVocation() {
     <div className="PakarVocation">
       <NavButton type="next" to="/PakarRole" /> 
       <NavBar activeButton={0} className="navbar" />
-      <h1 id='title'>העבר עכבר מעל הכרטיסייה למידע נוסף</h1>
+      <h1 id='title-desktop'>העבר עכבר מעל הכרטיסייה למידע נוסף</h1>
+      <h1 id='title-mobile'>לחץ על הכרטיסייה למידע נוסף</h1>
       <div id='tabs'>
         {tabs.map((tab, index) => (   
         <div key={tab.id} className="info-tab">
