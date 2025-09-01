@@ -13,6 +13,7 @@ import PakarHeadquarters from './ComponentsJs/PakarHeadquarters.jsx'
 import CommandStructure from './ComponentsJs/CommandStructure.jsx'
 import PakarDistricts from './ComponentsJs/PakarDistricts.jsx'
 import Medicine from './ComponentsJs/Medicine.jsx'
+import LastPage from './ComponentsJs/LastPage.jsx'
 
 function App() {
     return (
@@ -29,6 +30,7 @@ function App() {
                 <Route path="/CommandStructure" element={<CommandStructure />} />
                 <Route path="/PakarDistricts" element={<PakarDistricts />} />
                 <Route path="/Medicine" element={<Medicine />} />
+                <Route path="/LastPage" element={<LastPage />} />
             </Routes> 
         </div>
     );

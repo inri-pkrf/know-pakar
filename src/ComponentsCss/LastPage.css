@@ -1,0 +1,13 @@
+.LastPage {
+    background-color: aliceblue;
+    width: 100%;
+    height: 100vh;
+}
+
+.header-last-page {
+    font-size: 4vmax;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    padding-bottom: 5vh;
+    padding-top: 4vh;
+}

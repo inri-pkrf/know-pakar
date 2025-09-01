@@ -1,5 +1,112 @@
 .Medicine {
-    background-color: aliceblue;
-    width: 100vw;
-    height: 100vh;
+  background-color: aliceblue;
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2vh 0;
+  box-sizing: border-box;
+}
+
+#title-PakarHeadquarters {
+  margin-top: 16vh;
+  font-size: 4vmax;
+  text-align: center;
+}
+
+/* כרטיסיות – 2 שורות × 3 עמודות */
+#cards-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2vw;
+  margin-top: 5vh;
+  justify-items: center;
+}
+
+/* Flip card */
+.flip-card {
+  perspective: 1000px;
+  width: 20vw;   /* רוחב קבוע */
+  height: 20vh;  /* גובה קבוע */
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* צד קדמי ואחורי */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 1vw;
+  overflow: hidden;
+  box-shadow: 0 0 1vw rgba(0,0,0,0.2);
+}
+
+/* Front */
+.flip-card-front {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Back side */
+.flip-card-back {
+  background-color: #ebdede;
+  font-family: 'assistant';
+  transform: rotateY(180deg);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: center;
+  padding: 0.5vh 0.1vw;
+  font-size: 1.2vmax;
+  font-weight: bold;
+  box-sizing: border-box;
+}
+
+/* Back content */
+.back-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0.5vh 0; 
+}
+
+/* Container לכותרת */
+.back-title-container {
+  width: 102%; 
+  background-color: #c4b9b9;
+  padding: 0.5vh 0;
+  margin-bottom: 0.5vh;
+}
+
+/* כותרת */
+.back-title {
+  font-size: 1.8vmax;
+  font-weight: bold;
+  font-family: 'karantina';
+  margin: 0;
+  text-align: center;
+}
+
+/* טקסט אחורי */
+.back-content p {
+  margin: 0;
+  line-height: 1.2;
+  font-size: 1.3vmax;
+  font-weight: 500;
 }

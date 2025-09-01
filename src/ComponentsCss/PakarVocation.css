@@ -7,26 +7,26 @@
 }
 
 #tabs {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  gap: 2vw;
-  margin-top: 20vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 2vw;
+    margin-top: 20vh;
 }
 
 .info-tab {
-  width: 20vw;  
-  height: 40vh;  
-  padding: 2vh 1vw;
-  text-align: center;
-  perspective: 1000px; 
-  cursor: pointer;
-  position: relative;
-  box-sizing: border-box;
-  overflow: visible; 
-  z-index: 1000;       
+    width: 20vw;
+    height: 40vh;
+    padding: 2vh 1vw;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    z-index: 1000;
+    margin-top: 0;
 }
 
 .flip-card-inner {
@@ -38,76 +38,55 @@
     background: #A6BDC9;
     box-shadow: 0.5vw 0.5vw 0.3vw rgba(0, 0, 0, 0.25);
     border-radius: 2vw;
-    z-index: 1100; 
+    z-index: 1100;
 }
-
 
 .info-tab:hover .flip-card-inner {
-  transform: rotateY(180deg);
-}
-
-/* צד קדמי וצד אחורי */
-.card-front {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  border-radius: 2vw;
-  backface-visibility: hidden;   
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 2vh 1vw;
-  text-align: center;
-  box-sizing: border-box;
+    transform: rotateY(180deg);
 }
 
 .card-front, .card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  border-radius: 2vw;
-  backface-visibility: hidden;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 2vh 1vw;
-  text-align: center;
-  box-sizing: border-box;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 2vw;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2vh 1vw;
+    text-align: center;
+    box-sizing: border-box;
 }
 
 .card-front .tab-text {
-  transform: rotate(15deg);
-  font-size: 3vmax;
-  margin: 0;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  text-align: center;
-  z-index: 1;
+    transform: rotate(15deg);
+    font-size: 3vmax;
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
+    z-index: 1;
 }
 
-/* תמונה */
 .card-front .man-pic {
-  margin-top: 6%;     
-  width: 100%;
-  height: auto;
-  max-width: 100%;
-  max-height: 75%;      
-  object-fit: contain;
+    margin-top: 6%;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    max-height: 75%;
+    object-fit: contain;
 }
-
-
-/* צד אחורי */
 
 .card-back {
-  background-color: #A6BDC9;
-  transform: rotateY(180deg);
-  box-shadow: 0.5vw 0.5vw 0.3vw rgba(0, 0, 0, 0.25);
-  font-size: 1.5vmax;
-  font-family: 'assistant';
-  padding-top: 20%;
+    background-color: #A6BDC9;
+    transform: rotateY(180deg);
+    box-shadow: 0.5vw 0.5vw 0.3vw rgba(0, 0, 0, 0.25);
+    font-size: 1.5vmax;
+    font-family: 'assistant';
+    padding-top: 20%;
 }
 
 #definition {
@@ -116,18 +95,32 @@
     background-color: #85969E;
     width: 100%;
     height: 20%;
-    top: 0%;
+    top: 0;
     border-radius: 2vw 2vh 0vh 0vh;
     font-size: 3vmax;
     display: flex;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
 }
 
 #title {
- position: absolute;
- left: 50%;
- top: 10%;
- transform:translate(-50%, -50%) ;
- font-size: 3vmax
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    transform: translate(-50%, -50%);
+    font-size: 3vmax;
 }
+
+/* רק למובייל */
+/* @media screen and (max-width: 768px) {
+    .info-tab {
+        width: 30vw;
+        height: 30vh;
+        margin-top: 10%;
+    }
+
+    #title {
+        font-size: 5vmax;
+        width: 80%;
+    }
+} */

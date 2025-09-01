@@ -1,21 +1,24 @@
 .PakarHeadquarters {
     background-color: aliceblue;
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3vh 0;
+    box-sizing: border-box;
 }
 
 #title-PakarHeadquarters {
     font-size: 4vmax;
-    position: relative;
-    top: 15%;
+    text-align: center;
 }
 
+/* כרטיסיות */
 #pictures {
-    position: absolute;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 עמודות */
+    gap: 2vw;
     width: 70%;
-    flex-wrap: wrap;
-    top: 55%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    justify-items: center;
 }

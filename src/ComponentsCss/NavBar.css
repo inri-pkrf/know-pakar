@@ -37,6 +37,10 @@
   text-align: center;
 }
 
+.nav-bar-button:hover {
+  background: #548eb3;
+}
+
 .nav-bar-button p {
   margin: 0;
   font-weight: bold;

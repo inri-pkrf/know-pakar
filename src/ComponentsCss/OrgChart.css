@@ -1,0 +1,46 @@
+.org-chart {
+  width: 90vw;
+  margin: 5vh auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "assistant", sans-serif;
+}
+
+.org-header {
+  background: #c96f11;
+  color: white;
+  font-weight: bold;
+  font-size: 2.5vh;
+  padding: 2vh 4vw;
+  border-radius: 1vw;
+  margin-bottom: 4vh;
+  text-align: center;
+  box-shadow: 0 0 1vh rgba(0,0,0,0.3);
+}
+
+.org-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 4vw;
+  width: 100%;
+  justify-items: center;
+}
+
+.org-column {
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+  align-items: center;
+}
+
+.org-box {
+  background: #f4a340;
+  padding: 1.5vh 2vw;
+  border-radius: 1vw;
+  font-size: 2vh;
+  font-weight: bold;
+  text-align: center;
+  width: 20vw;
+  box-shadow: 0 0 0.8vh rgba(0,0,0,0.2);
+}
