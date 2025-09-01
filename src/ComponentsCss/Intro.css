@@ -302,12 +302,14 @@
 
     .skip {
         position: absolute;
-        top: 10%;
-        left: 10%;
+        top: 10px;
+        left: 10px;
+        background-color: transparent;
         font-family: 'Assistant', sans-serif;
-        font-size: 3em;
-        color: black;
-        direction: ltr;
+        font-weight: bolder;
+        border: none;
+        cursor: pointer;
+        z-index: 3000; /* גבוה יותר מהוידאו והקונטיינר */
     }
 
     .skip:hover {
