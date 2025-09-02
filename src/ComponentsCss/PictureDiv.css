@@ -26,3 +26,21 @@
     font-family: 'assistant';
     font-size: 1.5vmax;      /* גודל טקסט רספונסיבי לפי vh */
 }
+
+@media screen and (max-width: 768px) {
+  #pictures {
+    display: grid;
+    grid-auto-flow: row;   /* מציב את הכרטיסיות בשורה אחת */
+    grid-template-columns: unset;  /* מבטל את הגדרת 3 עמודות */
+    gap: 4vw;
+    width: auto;              /* גמיש לפי התוכן */
+    overflow-x: auto;         /* אפשר גלילה אופקית */
+    padding: 2vh 2vw;         /* ריווח סביב */
+  }
+
+  .PictureDiv {
+    width: 60vw;              /* רחב יותר למובייל */
+    height: auto;             /* גובה מותאם לפי תוכן */
+    margin: 0 2vw;            /* ריווח אופקי */
+  }
+}

@@ -1,3 +1,4 @@
+/* CommandStructure.css */
 .CommandStructure {
     background-color: aliceblue;
     width: 100vw;
@@ -48,18 +49,27 @@
     position: absolute;
     top: 57%;
     left: 70%;
+ /* מוסתר כברירת מחדל */
 }
 
 .box-group5 {
     position: absolute;
     top: 28%;
     left: 16%;
+ /* מוסתר כברירת מחדל */
 }
 
 .box-group6 {
     position: absolute;
     top: 63%;
     left: 16%;
+
+}
+
+.box-group4,
+.box-group5,
+.box-group6 {
+    display: block;   /* תמיד מוצגות במסך רגיל */
 }
 
 #structure {
@@ -69,6 +79,10 @@
     top: 55vh;
     left: 55%;
     transform: translate(-50%, -50%);
+}
+
+#structure-mobile {
+    display: none;
 }
 
 .box-group4 .box {
@@ -96,4 +110,98 @@
 .box-group .box {
   background: #CE7608; 
     font-weight: bold;
+}
+
+#title-structure {
+    position: absolute;
+    top: 13%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 7vmax;
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .box-group3 .box {
+    font-size: 2vmax;
+}
+
+    #title-structure {
+        display: block;
+    }
+    
+  .CommandStructure {
+        background-color: aliceblue;
+        width: 100vw;
+        height: auto;
+        min-height: 100vh;
+        overflow-x: hidden;
+        overflow-y: auto;
+        position: relative;
+
+    }
+
+    #structure {
+        display: none;
+    }
+    
+    #structure-mobile {
+        display: block;
+        position: relative;
+        width: 60vw;
+        height: auto;
+        margin: 0 auto;
+        margin-top: 54%;
+    }
+
+    /* שמירת המיקומים של כל הקופסאות */
+    .box-group { top: 25%; left: 38%; }
+    .box-group1 { top: 85%; left: 68%; }
+    .box-group2 { top: 35%; left: 38%; }
+    .box-group3 { top: 85%; left: 8%; }
+    .box-group4 { top: 111%; left: 70%; background-color: #b89060; padding: 1vw; border-radius: 0 0 2vw 2vw;}
+    .box-group5 { top: 94.5%; left: 9.5%; background-color: #b89060; padding: 1vw; border-radius: 0 0 2vw 2vw;}
+    .box-group6 { top: 131.5%; left: 9.5%; background-color: #b89060; padding: 1vw; border-radius: 0 0 2vw 2vw; z-index: 0;}
+
+    
+    .box-group3 {
+        padding-bottom: 40vh;
+    }
+
+    .box {
+        width: 25vw;
+        height: 5vh;
+        font-size: 2.3vh;
+    }
+    .box-group4 .box,
+    .box-group5 .box,
+    .box-group6 .box {
+        width: 20vw;
+    }
+
+        /* הכפתורים הרלוונטיים למובייל */
+    .box-group1 .box:last-child::after, /* רמ"ט הפיקוד */
+    .box-group3 .box:first-child::after, /* חטיבת החילוץ וההדרכה */
+    .box-group3 .box:last-child::after  /* המכללה הלאומית לאיתנות ישראלית */ {
+        content: ">";
+        margin-top: 10vh;
+        margin-left: -20vw;
+        font-size: 2.5vh;  
+        font-weight: bold;
+        position: absolute;
+        transition: transform 0.3s ease;
+    }
+
+        /* כשיש class "active" על הכפתור - הסיבוב */
+        .box-group1 .box:last-child.active::after,
+        .box-group3 .box:first-child.active::after,
+        .box-group3 .box:last-child.active::after {
+        transform: rotate(-90deg);
+    }
+
+    .box-group1 .box:last-child, /* רמ"ט הפיקוד */
+    .box-group3 .box:first-child, /* חטיבת החילוץ וההדרכה */
+    .box-group3 .box:last-child  /* המכללה הלאומית לאיתנות ישראלית */ {
+        padding-bottom: 4vh;
+    }
 }

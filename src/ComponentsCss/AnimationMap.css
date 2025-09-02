@@ -54,3 +54,56 @@
 .map-text.maane-map {
     color: #FA9B1D; /* צהוב */
 }
+
+@media screen and (max-width: 768px) {
+    html, body {
+      height: auto !important;   /* לא להגביל גובה */
+      min-height: 100%;          /* לפחות מסך מלא */
+      overflow-x: hidden;        /* לא לאפשר גלילה לרוחב */
+      overflow-y: auto;          /* אפשר גלילה אנכית */
+  }
+
+    .AnimationMap {
+        height: auto;         /* לא לחתוך לפי גובה מסך */
+        min-height: 100vh;    /* שיהיה לפחות מסך מלא */
+        position: relative;
+        overflow-x: hidden;
+        overflow-y: scroll;   /* שלא יופיע גלילה אופקית */
+        overflow: visible;
+  }
+
+  .maps-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10vh;
+    position: relative; /* חשוב */
+    }
+
+
+  .maps {
+    width: 35vw;                /* מפות גדולות יותר */
+    left: auto !important;      /* מבטלת את המיקום שחישבת inline */
+    top: auto !important;
+    position: relative;         /* במקום absolute */
+    margin: 2vh auto;           /* ריווח בין מפות */
+    display: block;
+  }
+
+  .map-text {
+    position: relative;
+    left: auto !important;
+    top: auto !important;
+    text-align: center;
+    margin-bottom: 4vh;
+    font-size: 4vmax;
+  }
+
+  .maps-container {
+    display: flex;
+    flex-direction: column;     /* מפות אחת מתחת לשנייה */
+    align-items: center;
+    margin-top: 10vh;
+    padding-bottom: 10vh;
+  }
+}

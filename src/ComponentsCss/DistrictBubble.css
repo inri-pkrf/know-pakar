@@ -58,3 +58,7 @@
   clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
   transform: rotate(104.42deg);
 }
+
+@media screen and (max-width: 768px) {
+
+}

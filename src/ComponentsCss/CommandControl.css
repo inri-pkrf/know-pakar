@@ -87,3 +87,66 @@
     width: 3vw;
     height: auto;
 }
+
+@media screen and (max-width: 768px) {
+    
+    #info-buttons {
+        display: flex;
+        justify-content: center;   /* מרכז את הכפתורים אופקית */
+        align-items: flex-start;   /* יישור אנכי */
+        width: 80%;
+        margin: 30vh auto 0 auto;  /* מרחק מהכותרת ומרכז אוטומטי */
+        gap: 6vw;                  /* רווח אחיד בין הכפתורים */
+    }
+
+    #arrows {
+        width: 65vw;
+        height: 8vh;
+        position: absolute;
+        top: 34vh;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    } 
+
+    #title-command-control {
+        position: relative;
+        top: 15vh;
+        font-size: 7vmax;
+    }
+
+    .info-btn {
+        width: 22vw;
+        padding: 2vh 2vw;
+        background: #E4B982;
+        box-shadow: 0.3vw 0.3vw 0.3vw rgba(0, 0, 0, 0.25);
+        border-radius: 2vw;
+        font-family: 'assistant';
+        font-size: 2vmax;
+        cursor: pointer;
+        margin: 0;                 /* הסרת margin שמזיז את הטקסט */
+        position: relative;
+        top: auto;
+    }
+
+    .info-text {
+        margin-top: 2vh;
+        font-size: 2.5vmax;
+        text-align: center;        /* מרכז את הטקסט */
+        font-family: "assistant";
+        width: 100%;               /* קח את כל רוחב ה-container */
+        max-width: 80vw;           /* לא לחרוג מרוחב הכפתור */
+        min-height: 3vh;           /* שמור מקום */
+        visibility: hidden;        /* מוסתר כברירת מחדל */
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+
+}
+
+
+@media screen and (min-width: 1025px) {
+
+}
