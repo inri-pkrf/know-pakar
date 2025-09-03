@@ -11,7 +11,8 @@ function PakarDistricts() {
       <NavButton type="back" to="/CommandStructure" />  
       <NavBar activeButton={3} className="navbar" />
 
-      <h1 id='title-PakarDistricts'>לחץ על מחוז למידע נוסף</h1>
+      <h1 id='title-PakarDistricts-phone'>לחץ על מחוז למידע נוסף</h1>
+    <h1 id='title-PakarDistricts-comp'>העבר עכבר מעל מחוז למידע נוסף</h1>
 
       <div className="map-container">
         <img 

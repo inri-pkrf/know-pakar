@@ -9,7 +9,12 @@
     box-sizing: border-box;
 }
 
-#title-PakarDistricts {
+#title-PakarDistricts-phone {
+    display: none;
+}
+
+#title-PakarDistricts-comp {
+    display: block;
     margin-top: 16vh;
     font-size: 4vmax;
     text-align: center;
@@ -17,7 +22,7 @@
 
 .map-container {
     position: relative;
-    width: 35%;      
+    width: 30%;      
     margin: 0 auto;
 }
 
@@ -64,5 +69,15 @@
         width: 95%;      
         margin: 0 auto;
     }
+    
+    #title-PakarDistricts-phone {
+        display: block;
+        margin-top: 16vh;
+        font-size: 4vmax;
+        text-align: center;
+    }
 
+    #title-PakarDistricts-comp {
+        display: none;
+    }
 }

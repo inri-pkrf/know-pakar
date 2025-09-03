@@ -61,13 +61,13 @@
 
 @media screen and (max-width: 768px) {
   .rectangle {
-    width: 90%;            /* תופס כמעט את כל רוחב המסך */
+    width: 60%;    /* תופס כמעט את כל רוחב המסך */
     max-width: none;       /* לא מגביל רוחב */
     min-width: unset;      /* מאפשר להיות קטן */
-    padding: 3vw;          /* ריווח פנימי יחסי למסך */
+    padding: 2vw;          /* ריווח פנימי יחסי למסך */
     margin: 1vh auto;      /* מרכז אנכית + רווח בין הכרטיסיות */
     gap: 2vw;              /* ריווח בין תמונה וטקסט */
-    left: 40vw;
+    left: 28vw;
   }
 
   .map-logos {
@@ -77,12 +77,12 @@
   }
 
   .text-DistrictBubble {
-    font-size: 3.5vw;      /* טקסט קריא במובייל */
+    font-size: 3vw;      /* טקסט קריא במובייל */
 
   }
 
   .polygon {
-    left: 167%;             /* לא יוצא מהמסך */
+    left: 130%;             /* לא יוצא מהמסך */
     width: 5vw;
     height: 4vh;
   }

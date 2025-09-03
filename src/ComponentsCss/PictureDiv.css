@@ -1,7 +1,7 @@
 .PictureDiv {
     width: 20vw;         /* 80% מרוחב המסך */
-    height: 20vh;        /* 30% מגובה המסך */
-    margin: 2vh auto;    /* רווח אנכי יחסי לגובה המסך, מרכז אופקי */
+    height: 22vh;        /* 30% מגובה המסך */
+    margin: 0.5vh auto;    /* רווח אנכי יחסי לגובה המסך, מרכז אופקי */
     position: relative;
     border-radius: 1vw;  /* רדיוס משתנה לפי רוחב המסך */
     overflow: hidden;
@@ -19,7 +19,7 @@
 
 .PictureDiv .picture-text {
     position: absolute;
-    bottom: 0;
+    bottom: 0vh;
     width: 100%;
     text-align: center;        /* ריווח עליון ותחתון לפי vh */
     font-weight: bold;

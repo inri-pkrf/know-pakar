@@ -51,7 +51,7 @@
 
 .info-text {
     margin-top: 2vh;
-    font-size: 1.5vmax;
+    font-size: 3vmin;
     text-align: center;        /* מרכז את הטקסט */
     font-family: "assistant";
     width: 100%;               /* קח את כל רוחב ה-container */
@@ -94,9 +94,9 @@
         display: flex;
         justify-content: center;   /* מרכז את הכפתורים אופקית */
         align-items: flex-start;   /* יישור אנכי */
-        width: 80%;
+        width: 95%;
         margin: 30vh auto 0 auto;  /* מרחק מהכותרת ומרכז אוטומטי */
-        gap: 6vw;                  /* רווח אחיד בין הכפתורים */
+        gap: 1vw;                  /* רווח אחיד בין הכפתורים */
     }
 
     #arrows {
